@@ -43,12 +43,12 @@ app.get('/', function(req, res){
 });
 
 // Contacts - Index 
-app.get('/contacts', function(req, res{
+app.get('/contacts', function(req, res){
     Contact.find({}, function(err, contacts){
         if(err) return res.json(err);
         res.render('contacts/index', {contacts:contacts});
     });
-}));
+});
 
 // Contacts - New
 app.get('/contacts/new', function(req, res){
